@@ -56,6 +56,8 @@ function taskCard(taskArray){
     const startedOrNotMessage = document.createElement('p');
     const date = document.createElement('p');
     date.textContent = `Posted: ${postDate()}`
+    const newButton = document.createElement('button');
+    newButton.innerHTML = "Remove"
 
     const line = document.createElement('hr');
 
@@ -79,8 +81,15 @@ function taskCard(taskArray){
     newCard.appendChild(taskHeader);
     newCard.appendChild(descriptionHeader);
     newCard.appendChild(startedOrNotMessage);
+    newCard.appendChild(newButton)
     newCard.appendChild(line);
     newCard.appendChild(date);
+
+    newButton.addEventListener('click',()=>{
+        newButton.parentNode.remove();
+        delete tasks[newButton.parentNode];
+        tasks.length -= 1;
+    })
 }
 
 function validate(check,text){
