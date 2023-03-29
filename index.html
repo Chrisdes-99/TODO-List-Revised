@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>TODO List</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>TODO LIST</h1>
+      <!--<div class="navbar">
+        <button class="darkButton" onclick="darkMode()">Dark Mode</button>-
+        <a href="" class="headerLink1">Sign In</a>
+        <a href="" class="headerLink">Join Now</a>
+      </div>-->
+    </div>
+
+    <div class="page-container">
+      <!--- <div class="first-container">
+        <h3>Hello</h3>
+      </div>-->
+
+      <!-- Container for whole Task Section -->
+      <div class="container">
+        <!-- Div for Task Input Form -->
+        <div class="formDiv">
+          <p style="color: red; text-align: center; font-size: small">
+            * Required
+          </p>
+          <!-- Form for Task Input -->
+          <form class="listForm">
+            <div class="form-grid">
+              <!-- Task Name Input -->
+              <div class="inputBox">
+                <label for="taskName"
+                  ><span style="color: red">*</span> Task:</label
+                >
+                <input
+                  type="text"
+                  id="taskName"
+                  required
+                  oninput="this.value = this.value.toUpperCase()"
+                />
+              </div>
+
+              <div class="inputBox">
+                <label for="taskDescription">Notes:</label>
+                <input type="text" id="taskDescription" />
+              </div>
+
+              <!-- Priority Input -->
+              <div class="inputBox">
+                <label for="taskPriority">
+                  <span style="color: red">*</span> Priority:</label
+                >
+                <input
+                  type="number"
+                  id="taskPriority"
+                  min="1"
+                  value="1"
+                  max="3"
+                  required
+                />
+              </div>
+
+              <!-- Task Due Date Input -->
+              <div class="inputBox">
+                <label for="date">
+                  <span style="color: red">*</span> Due Date:
+                  <input type="date" id="date" required />
+                </label>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="inputBox">
+              <label for="progress">Progress:</label>
+              <select id="progress" name="progree">
+                <option value="backlog">Backlog</option>
+                <option value="inProgress">In Progress</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+
+            <br />
+
+            <!-- Submit Button -->
+            <input type="submit" id="submitForm" />
+          </form>
+        </div>
+
+        <br />
+
+        <!-- Task Cards Section -->
+        <div class="ListDiv">
+          <h2 style="color: black; text-align: center">TASK BOARD</h2>
+
+          <div class="cards"></div>
+          <br />
+        </div>
+
+        <!--<div class="taskBoard">
+          <div class="progress">
+            <h2 id="bL">Backlog</h2>
+            <div class="backLogCard"></div>
+          </div>
+          <div class="progress">
+            <h2 id="iP">In Progress</h2>
+            <div class="inProgressCard"></div>
+          </div>
+          <div class="progress">
+            <h2 id="d">Done</h2>
+            <div class="doneCard"></div>
+          </div>
+        </div>-->
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
